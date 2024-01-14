@@ -10,7 +10,7 @@ func TestAuthFail(t *testing.T) {
 		"Authorization": {"asuh", "dud"},
 	})
 	res, err := GetAPIKey(header)
-	if err != nil {
+	if err == nil {
 		t.Error("there should be an error", res, err)
 	}
 }
